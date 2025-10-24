@@ -1,35 +1,28 @@
-/* Estilos Customizados para a Landing Page (Paleta Hackers do Bem) */
+/* Estilos da Landing Page - Tema Hacker do Bem */
 
-/* Definição de Cores Base */
+/* Paleta de Cores */
 :root {
   --color-primary: #2c3e50;
-  /* Azul Escuro / Roxo */
   --color-secondary: #4CAF50;
-  /* Verde Neon / Cítrico - Destaque */
-  --color-text-light: #ffffff;
-  --color-text-dark: #212529;
+  --cor-clara-texto: #ffffff;
+  --cor-escura-texto: #212529;
 }
 
-/* Estilos para a Dobra 1 (Hero) */
+/* Seção Principal (Hacker Hero) */
 .hero-section {
   background-color: var(--color-primary);
   min-height: 80vh;
   display: flex;
   align-items: center;
-  color: var(--color-text-light);
-  /* Texto claro no fundo escuro */
-
-  /* Remoção da imagem de fundo background-tech.jpg para usar a cor sólida da paleta */
+  color: var(--cor-clara-texto);
   background-image: none;
 }
 
 /* Estilo para o Botão CTA (Chamada para Ação) */
 .cta-button {
-  /* Cor de contraste forte: Verde Neon */
   background-color: var(--color-secondary);
   border-color: var(--color-secondary);
-  color: var(--color-text-dark);
-  /* Texto escuro no botão claro */
+  color: var(--cor-escura-texto);
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -37,26 +30,22 @@
 
 .cta-button:hover {
   background-color: #388E3C;
-  /* Verde um pouco mais escuro no hover */
   border-color: #388E3C;
-  color: var(--color-text-dark);
-  transform: translateY(-2px);
+  color: var(--cor-escura-texto);
+  transform: translateY(-2px); /* Adicionada sutil quebra de linha */
 }
 
 /* Estilo para a caixa do Formulário (Fundo claro e borda de destaque) */
 .form-box {
-  background-color: var(--color-text-light) !important;
+  background-color: var(--cor-clara-texto) !important;
   border: 2px solid var(--color-secondary);
-  /* Borda Verde para destacar */
   border-radius: 10px;
-  color: var(--color-text-dark);
-  /* Texto escuro dentro da caixa */
+  color: var(--cor-escura-texto);
 }
 
 /* Estilos para a Dobra 2 (Benefícios) */
 .benefits-section {
-  background-color: var(--color-text-light);
-  /* Fundo branco para contraste com Dobra 1 */
+  background-color: var(--cor-clara-texto);
 }
 
 .benefits-section .card {
@@ -78,22 +67,24 @@
 /* Estilos para a Dobra 3 (Depoimento) */
 .testimonial-section {
   background-color: #34495e;
-  /* Um tom de azul escuro um pouco diferente do fundo principal */
-  color: var(--color-text-light);
+  color: var(--cor-clara-texto);
 }
 
 .testimonial-section .blockquote {
   border-left: 5px solid var(--color-secondary);
-  /* Linha de destaque em Verde */
   padding-left: 1rem;
   font-style: italic;
 }
 
 .testimonial-section .blockquote-footer {
   color: rgba(255, 255, 255, 0.7) !important;
-  /* Cor clara para fonte do depoimento */
 }
 
+.card-testimonial-custom {
+  background-color: #41556a !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--cor-clara-texto);
+}
 
 /* Estilos para o Rodapé (Footer) */
 .footer {
@@ -102,16 +93,27 @@
 }
 
 /* Ajuste nos títulos e textos da Dobra 1 para a cor de destaque (Verde Cítrico) */
-.hero-section .text-warning {
+.hero-section .text-warning,
+.hero-section .text-secondary {
   color: var(--color-secondary) !important;
-  /* Altera o 'text-warning' para o Verde de destaque */
 }
 
-/* Ajuste do Modal de Agradecimento */
+/* Estilo do cabeçalho do Modal */
 #thankYouModal .modal-header {
   background-color: var(--color-secondary) !important;
 }
 
+/* Mapeia o texto primário do Modal para o Azul Escuro */
 #thankYouModal .text-primary {
   color: var(--color-primary) !important;
+}
+
+/* Garante que o ícone de e-mail no modal (se tiver a classe text-secondary) seja Verde Cítrico */
+#thankYouModal .text-secondary {
+  color: var(--color-secondary) !important;
+}
+
+/* O ícone de envelope no modal usa uma classe que define sua cor: */
+#thankYouModal .bi-envelope-check-fill {
+  color: var(--color-secondary) !important;
 }
